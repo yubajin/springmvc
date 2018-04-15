@@ -8,17 +8,41 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.yubajin.springmvc.entity.User;
+
 @RequestMapping("/springmvc")
 @Controller
 public class Main {
 	private static final String SUCCESS = "success";
+
+	/**
+	 * Spring MVC 会按请求参数名和 POJO 属性名进行自动匹 配，自动为该对象填充属性值。支持级联属性。
+	 * 如：dept.deptId、dept.address.tel 等
+	 * @author Administrator
+	 *
+	 */
+	@RequestMapping("/testPojo")
+	public String testPojo(User user) {
+		System.out.println("testPojo: " + user);
+		return SUCCESS;
+	}
 	
+	/***
+	 * 使用 @CookieValue 绑定请求中的 Cookie 值
+	 * @param sessionId
+	 * @return
+	 */
 	@RequestMapping("/testCookieValue")
 	public String testCookieValue(@CookieValue("JSESSIONID") String sessionId) {
 		System.out.println("testCookieValue: sessionId:"+sessionId);
 		return SUCCESS;
 	}
 	
+	/***
+	 * 使用 @RequestHeader 绑定请求报头的属性值
+	 * @param al
+	 * @return
+	 */
 	@RequestMapping(value="/testHeader")
 	public String testHeader(@RequestHeader(value="Accept-Language") String al) {
 		
