@@ -9,7 +9,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class Main {
 	private static final String SUCCESS = "success";
 	
-	@RequestMapping(value="testParamsAndHeaders",
+	@RequestMapping("/testAntPath/*/abc")
+	public String testAntPath() {
+		System.out.println("testAntPath");
+		return SUCCESS;
+	}
+	
+	@RequestMapping(value="/testParamsAndHeaders",
 					params= {"username","age!=10"},
 					headers= {"Accept-Language=zh-CN,zh;q=0.8"})
 	public String testParamsAndHeaders() {

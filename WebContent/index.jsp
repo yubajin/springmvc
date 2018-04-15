@@ -7,11 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<a href="springmvc/testAntPath/yayaya/abc">Test AntPath</a></br>
     <a href="springmvc/testParamsAndHeaders?username=programmer&age=10">Test ParamsAndHeaders</a>
 	<form action="springmvc/testMethod" method="POST">
 		<input type="submit" value="submit"/>
 	</form>
 	<a href="helloworld">Hello world</a></br>
-	<a href="springmvc/testRequestMapping">TestRequestMapping</a>
+	<a href="springmvc/testRequestMapping">Test RequestMapping</a>
 </body>
 </html>
