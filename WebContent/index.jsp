@@ -7,6 +7,41 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+	<form action="springmvc/testPojo" method="post">
+		username:<input type="text" name="username"/><br>
+		password:<input type="password" name="password"/><br>
+		<input type="submit" value="submit"/>
+	</form>
+	<br><br>
+	
+	<a href="springmvc/testHeader">Test Header</a>
+	<br><br>
+	
+	<a href="springmvc/testRequestParam?username=programmer&age=11">Test RequestParam</a>
+	<br><br>
+	
+	<form action="springmvc/testRest/1" method="post">
+		<input type="hidden" name="_method" value="PUT" />
+		<input type="submit" value="TestRest PUT"> 
+	</form>
+	<br><br>
+	
+	<form action="springmvc/testRest/1" method="post">
+		<input type="hidden" name="_method" value="DELETE" />
+		<input type="submit" value="TestRest DELETE"> 
+	</form>
+	<br><br>
+	
+	<form action="springmvc/testRest" method="post">
+		<input type="submit" value="TestRest POST"> 
+	</form>
+	<br><br>
+	
+	<a href="springmvc/testRest/1">Test Get</a>
+	<br><br>
+	
+	<a href="springmvc/testPathVariable/101">Test PathVariable</a></br>
 	<a href="springmvc/testAntPath/yayaya/abc">Test AntPath</a></br>
     <a href="springmvc/testParamsAndHeaders?username=programmer&age=10">Test ParamsAndHeaders</a>
 	<form action="springmvc/testMethod" method="POST">
